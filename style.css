@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url(./Fonts/DM_Sans/DMSans-Regular.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: #F8E9DD;
+    font-family: "DM Sans";
+    display: flex;
+    justify-content: center;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EC755D;
+    border-radius: 20px;
+    width: 540px;
+    height: 125px;
+}
+
+.panel-balance {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.balance_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.balance {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFBF6;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.container-spending {
+    margin-top: 24px;
+    background: #FFFBF6;
+    border-radius: 20px;
+    width: 540px;
+    height: 511px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.spending-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: #382314;
+    margin: 0;
+}
+
+/* Styling the charts */
+
+.charts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 460px;
+    height: 250px;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount {
+    width: 70px;
+    height: 40px;
+    background-color: #382314;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFBF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    margin-top: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: #EC755D;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.body:hover {
+    background-color: #FF9B86;
+}
+
+.wednesday {
+    background-color: #76B5BC;
+}
+
+.day {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #92857A;
+}
+
+.line {
+    width: 460px;
+    height: 2px;
+    background-color: #F8E9DD;
+    border-radius: 1px;;
+}
+
+.panel-total {
+    display: flex;
+    width: 460px;
+    height: 87px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.total-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.total_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #92857A;
+    margin: 0;
+}
+
+.total-dollars {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #382314;
+}
+
+.percentage-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.percentage {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: right;
+    color: #382314;
+}
+
+.percentage_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #92857A;
+    margin: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.currentDay {
+    background-color: #76B5BC;
+}
+
+.currentDay:hover {
+    background-color: #B4E0E5;
+}
+
+@media screen and (max-width: 480px) {
+    
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 67px;
+    width: 343px;
+    height: 534px;
+}
+
+.panel-header {
+    border-radius: 20px;
+    width: 343px;
+    height: 97px;
+}
+
+.panel-balance {
+    margin-left: 30px;
+}
+
+.balance_text {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.balance {
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.container-spending {
+    margin-top: 16px;
+    border-radius: 20px;
+    width: 343px;
+    height: 421px;
+}
+
+.spending-header {
+    font-size: 24px;
+    line-height: 31px;    
+    margin: 0;
+}
+
+.charts {
+    width: 303px;
+    height: 200px;
+}
+
+.amount {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.body {
+    margin-top: 8px;
+    width: 33px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.day {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.line {
+    width: 303px;
+    height: 2px;
+    border-radius: 1px;;
+}
+
+.panel-total {
+    width: 303px;
+    height: 63px;
+    margin-top: 24px;
+}
+
+.total_text {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.total-dollars {
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.percentage-panel {
+    margin-bottom: 10px;
+}
+
+.percentage {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.percentage_text {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+}
+
+}
