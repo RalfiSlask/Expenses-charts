@@ -1,5 +1,20 @@
 const charts = document.querySelector(".charts");
 
+const fetchJsonData = async ()  => {
+    try {
+        const response = await fetch("./data.json")
+        
+        if(response.ok) {
+            const jsonData = await response.json();
+        } else {
+            throw new Error("response not okey")
+        };
+        
+    } catch (error) {
+        console.log(error)
+    }
+};
+
 fetch("./data.json")
 .then(response => {
     return response.json();
@@ -38,9 +53,10 @@ fetch("./data.json")
         }
     }
 
-    const highlightCurrentDay = () => {
+    const highlightCurrentDayOld = () => {
         const date = Date();
         const dateArray = date.split(" ");
+
         let weekday;
         for(let i = 0; i < dateArray.length; i++) {
             weekday = dateArray[0].toLowerCase();
@@ -50,7 +66,25 @@ fetch("./data.json")
                chartBodies[i].classList.toggle("currentDay"); 
             }
         }
-    } 
+    }; 
+
+    const highlightCurrentDay = () => {
+        const date = Date();
+        const dateArray = date.split(" ");
+        let weekday;
+
+        dateArray.forEach(date => {
+            weekday = date.toLowerCase();
+        });
+
+        for(let i = 0; i < currentDay.length; i++) {
+            if(weekday == currentDay[i].innerHTML) {
+               chartBodies[i].classList.toggle("currentDay"); 
+            }
+        }
+    }; 
+
+
 
     highlightCurrentDay();
     showAmountOnHover();
